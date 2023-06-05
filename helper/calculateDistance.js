@@ -28,7 +28,7 @@ module.exports.calculateDistance = (a, b, unit = 'M') => {
         let lon2 = zipCodes[item]?.location.lon
         
         if ((lat1 == lat2) && (lon1 == lon2)) {
-            distanceArray.push(0);
+            distanceArray.push("0");
         }
         else {
             let radlat1 = Math.PI * lat1 / 180;
