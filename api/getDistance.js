@@ -25,12 +25,7 @@ router.get('/city', getAllCityDistances, (req, res) => {
 router.get('/zipcode', (req, res) => {
 
     if (req.query && req.query.zipcode1 && req.query.zipcode2 && req.query.unit && zipCodes[req.query.zipcode1]) {
-        res.send({
-            message: 'completed your request',
-            zipcode1: zipCodes[req.query.zipcode1],
-            zipcode2: zipCodes[req.query.zipcode2],
-            distance: calculateDistance(zipCodes[req.query.zipcode1].location, req.query.zipcode2, req.query.unit)
-        })
+        res.send(calculateDistance(zipCodes[req.query.zipcode1].location, req.query.zipcode2, req.query.unit))
     } else {
         res.send({ error: 'not valid query or zip code not found' })
     }
