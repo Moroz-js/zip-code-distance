@@ -23,7 +23,6 @@ module.exports.calculateDistance = (a, b, unit = 'M') => {
     JSON.parse(b).forEach((item) => {
         let lat1 = a.lat;
         let lon1 = a.lon;
-        console.log(zipCodes[item])
         let lat2 = zipCodes[item]?.location.lat;
         let lon2 = zipCodes[item]?.location.lon
         
