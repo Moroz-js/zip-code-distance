@@ -43,7 +43,7 @@ module.exports.calculateDistance = (a, b, unit = 'M') => {
             dist = dist * 60 * 1.1515;
             if (unit == "K") { dist = dist * 1.609344 }
             if (unit == "N") { dist = dist * 0.8684 }
-            distanceArray.push(dist.toFixed(4))
+            distanceArray.push(dist.toFixed(2))
         }
         })
     return distanceArray
