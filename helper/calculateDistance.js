@@ -23,8 +23,9 @@ module.exports.calculateDistance = (a, b, unit = 'M') => {
     JSON.parse(b).forEach((item) => {
         let lat1 = a.lat;
         let lon1 = a.lon;
-        let lat2 = zipCodes[item].location.lat;
-        let lon2 = zipCodes[item].location.lon
+        console.log(zipCodes[item])
+        let lat2 = zipCodes[item]?.location.lat;
+        let lon2 = zipCodes[item]?.location.lon
         
         if ((lat1 == lat2) && (lon1 == lon2)) {
             distanceArray.push(0);
